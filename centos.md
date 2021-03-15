@@ -23,3 +23,34 @@
 重启虚拟机network服务&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **service network restart**
 
 ---
+# 2021/03/15
+    [用户名@主机 /当前目录]。  
+    $ 普通账号 # 超级管理员。  
+    所有命令小写 --tab命令补齐。  
+    命令后加入&,开启terminal新窗口。  
+    命令后加 / 可以带入命令参数。  
+    命令后加; 效果和powershell 的pipe效果一样。
+    dos的dir与ls一样。  
+    cd 参数： . 表示当前目录  .. 表示上级目录  ~ 表示家目录  / 表示所有目录的起点，即根目录（相当于windows的盘符）。
+    在linux里，如果文件以.开头，则默认隐藏。
+    蓝颜色是目录，黑色是文件，绿色表示该路径有可执行的文件。 
+**mv docu1.1 docu2.2** *改名 由1-2*  
+**ls -a** *显示隐藏的文件与文件夹*  
+**ls -l** *显示文件详细信息（只能查看文件，不能查看文件夹）*  
+**cat file1** *查看file1文件内容*  
+**cat file1 file2 > file3** *将文件写入file3*  
+**cat file1 file2 >> file3** *将文件追加入file3*  
+**more file**
+**less file**  *b上一页， space下一页， q退出*
+**mkdir -p ccc/ddd/eee** *创建文件目录*  
+**rmdir ccc** *删除空文件夹 ccc*  
+**rm -fr 文件名** *删除文件夹* 
+**cp file1 file2** *拷贝file1 到file2*
+**rm -r** *删东西（要询问）*  
+**rm -rf** *删东西（不询问）*  
+**cp -r demo1 demo2** *复制文件夹demo1 到 demo2,去掉参数-r 可以复制文件*  
+
+
+
+---
+
