@@ -53,4 +53,10 @@
 
 
 ---
-
+# 2021/03/17
+**ps -aux** *显示系统中全部的进程信息*  
+**df** *查看系统磁盘分区情况和使用率*  
+**cat /proc/meminfo** *查看系统内存使用情况*  
+**parted工具 -- 使用 p 查看分区情况，quit退出**  
+**zip -r(recurion递归) -q(安静模式quiet) -o(输出文件) filename path（绝对路径absolute path）** *把path路径下的文件打包成filename.zip*  
+**du -h file** *查看file的大小，以K M G 为单位*
