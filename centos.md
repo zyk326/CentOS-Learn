@@ -19,7 +19,7 @@
 **ls /etc/sysconfig/network-scripts**   
 **vi /etc/sysconfig/network-scripts/ifcfg-ensxxx**  
 修改bootproto 为"dhcp"，修改onboot为"yes"  
-在wondows下开启虚拟机DHCP 和 Net服务 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **net start VMware DHCP Service**  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**net start VMware NET Service**  
+在wondows下开启虚拟机DHCP 和 Net服务 **net start VMware DHCP Service**  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**net start VMware NET Service**  
 重启虚拟机network服务&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **service network restart**
 
 ---
@@ -56,7 +56,27 @@
 # 2021/03/17
 **ps -aux** *显示系统中全部的进程信息*  
 **df** *查看系统磁盘分区情况和使用率*  
-**cat /proc/meminfo** *查看系统内存使用情况*  
+**cat /proc/meminfo** *or* **free** *查看系统内存使用情况*  
 **parted工具 -- 使用 p 查看分区情况，quit退出**  
 **zip -r(recurion递归) -q(安静模式quiet) -o(输出文件) filename path（绝对路径absolute path）** *把path路径下的文件打包成filename.zip*  
-**du -h file** *查看file的大小，以K M G 为单位*
+**du -h file** *查看file的大小，以K M G 为单位*  
+
+---
+# 2021/03/22
+**touch file** *创建一个名为file的文件到当前文件夹*  
+**gedit file** *对名为file的文件进行编辑， 以GUI的方式*  
+**diff file1 file2** *对比两个文件的差别*  
+**tar c(create)z(通过zip指令处理备份文件)v(verbose)f(指定备份文件) filename filepath** *压缩命令 czvf是参数 filename文件名 filepath文件路径*  
+**tar x(extract)z(zip)v(verbose)f(file) filepath** *解压缩文件到当前路径*   
+**whereis ls** *查找命令所有路径*  
+**grep ls** *查找命令所在路径*   
+**free** *cup内存占用情况*  
+**top** **  
+**date** *查看当前linux时钟*  
+**cal** *日历*  
+**pstree** *查看进程树*  
+**kill pid** *根据pid结束进程*  
+**^l** *=clear*
+**uname -a** *查看版本*  
+**man commit // info commit** *查看帮助手册*  
+**shutdown** *关机命令， 需要参数*
