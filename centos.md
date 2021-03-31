@@ -56,7 +56,8 @@
 # 2021/03/17
 **ps -aux** *显示系统中全部的进程信息*  
 **df** *查看系统磁盘分区情况和使用率*  
-**cat /proc/meminfo** *or* **free** *查看系统内存使用情况*  
+**cat /proc/meminfo** *or*   
+**free/top** *查看系统内存使用情况*  
 **parted工具 -- 使用 p 查看分区情况，quit退出**  
 **zip -r(recurion递归) -q(安静模式quiet) -o(输出文件) filename path（绝对路径absolute path）** *把path路径下的文件打包成filename.zip*  
 **du -h file** *查看file的大小，以K M G 为单位*  
@@ -69,14 +70,61 @@
 **tar c(create)z(通过zip指令处理备份文件)v(verbose)f(指定备份文件) filename filepath** *压缩命令 czvf是参数 filename文件名 filepath文件路径*  
 **tar x(extract)z(zip)v(verbose)f(file) filepath** *解压缩文件到当前路径*   
 **whereis ls** *查找命令所有路径*  
-**grep ls** *查找命令所在路径*   
+**grep ls** *查找命令所在路径*  (也可查找文件中指定内容，与管道连用) 
 **free** *cup内存占用情况*  
 **top** **  
 **date** *查看当前linux时钟*  
 **cal** *日历*  
 **pstree** *查看进程树*  
 **kill pid** *根据pid结束进程*  
-**^l** *=clear*
+**^l** *=clear*  
 **uname -a** *查看版本*  
 **man commit // info commit** *查看帮助手册*  
-**shutdown** *关机命令， 需要参数*
+**shutdown** *关机命令， 需要参数*  
+**echo string >> filepath** *将string加入到file的最后*    
+
+
+---
+# 2021/03/29  
+shell的=左右不能有space  
+访问一个变量要加$符号  
+echo == printf  
+permission denies错误 : chmod 777 filename  *给文件权限*  
+管道 ： 一个命令的输出作为另一个命令的输入  
+\>> 表示数据追加 ： echo "echo zyk" >> demo.sh
+echo 在外部表示写入 ： echo "echo zyk" > demo.sh   
+if -- fi *fi表示if的结束*    
+wc *查看文件数据属性* -c字节数 -l行数 -w单词数
+
+    if [ -f /home.linux ] //[]前后要空格space
+    then  
+    echo file  
+    else
+    echo dir  
+    fi      
+    *******************************************
+    for i in 1 2 3 4  
+    do  
+    echo $i  
+    done  
+    *******************************************  
+    j=1
+    while [ $j -le 10 ]  
+    do  
+    echo $j  
+    j=$(($j + 1)) //expr表示一个运算  
+    done 
+>> shell -> 解释型语言  
+
+# ***vi***  
+* 输入 ： i / insert  
+* 保存退出 ： :wq / :x  
+* 退出不保存 ： :q  
+* 看行数 :set nu  
+* 搜索行号 ： ：2 >> 跳到第二行  
+* 复制&粘贴：yy p   
+* 删除一行：dd  
+---
+
+>> 在linux中执行c程序：  
+ gcc <.c文件名> -o <可执行文件名> 
